@@ -1,0 +1,26 @@
+<h1>Game <%= @game.id %></h1>
+
+<% if @game.won? %>
+  <h2>Game Over - Player <%= @game.current_player %> Won!</h2>
+<% elsif @game.finished? %>
+  <h2>Draw</h2>
+<% end %>
+
+<h3>Player O: <%= @game.player_1 %></h3>
+<h3>Player X: <%= @game.player_2 %></h3>
+<h3>Current Player: <%= @game.current_player %></h3>
+
+<% @game.board.each_with_index do |field, index| %>
+  <% if index % 3 == 0 %>
+    <br/>
+  <% end %>
+
+  <% if field == "O" || field == "X" %>
+    <%= button_tag field, :disabled => true %>
+  <% else %>
+    <%= form_for @game do |f| %>
+      <%= hidden_field_tag "index", index %>
+      <%= f.submit field %>
+    <% end %>
+  <% end %>
+<% end %>

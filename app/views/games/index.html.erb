@@ -1,0 +1,11 @@
+<h1>Games</h1>
+
+<p>
+  <%= link_to "New game", new_game_path %>
+</p>
+
+<ol>
+  <% @games.each do |game| %>
+    <li><%= link_to "#{game.player_1} vs #{game.player_2}", game_path(game) %></li>
+  <% end %>
+</ol>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  board: MyText
+  player_1: MyString
+  player_2: MyString
+  current_player: MyString
+
+two:
+  board: MyText
+  player_1: MyString
+  player_2: MyString
+  current_player: MyString

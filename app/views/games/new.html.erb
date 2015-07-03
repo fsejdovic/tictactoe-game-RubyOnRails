@@ -1,0 +1,21 @@
+<h1>New Game</h1>
+
+<%= form_for @game do |f| %>
+  <% @game.errors.each do |field, message| %>
+    <p><%= field %> <%= message %></p>
+  <% end %>
+
+  <p>
+    <%= f.label :player_1 %><br/>
+    <%= f.text_field :player_1 %>
+  </p>
+
+  <p>
+    <%= f.label :player_2 %><br/>
+    <%= f.text_field :player_2 %>
+  </p>
+
+  <p>
+    <%= f.submit "Create Game" %>
+  </p>
+<% end %>
