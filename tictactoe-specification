@@ -1,0 +1,6 @@
+Gem::Specification.new do |s|
+  s.version     = '1.0.0'
+  s.summary     = "A simple Tic-Tac-Toe game developed in Ruby on Rails"
+  s.authors     = ["Ferid Sejdović"]
+  s.description = "Play tic tac toe in your web browser..."
+end
